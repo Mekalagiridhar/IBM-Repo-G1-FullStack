@@ -2,7 +2,9 @@
  * 
  */
 package com.crs.ibm.application;
-
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 import com.crs.ibm.exception.MySQLIntegrityConstraintViolationException;
@@ -21,7 +23,7 @@ import com.crs.ibm.service.UserInterface;
 import com.crs.ibm.service.Userservice;
 
 /**
- * @author 003N75744
+ * @author Abhishek,Ashok,Madhuchandhan,Rajesh,Giridhar
  *
  */
 public class CRSApplication {
@@ -41,6 +43,9 @@ public class CRSApplication {
 		while(v==1)
 		{  UserInterface u=new Userservice();
 			System.out.println("welcome to crsapplication");
+		        LocalDate localdate=LocalDate.now();
+			LocalTime localtime=LocalTime.now();
+			System.out.println("Current Date :"+localdate+ "\tTime of login:\t"+localtime);
 			System.out.println("1: Login  ");
 			System.out.println("2: New registration");
 			System.out.println("3: Exit");
