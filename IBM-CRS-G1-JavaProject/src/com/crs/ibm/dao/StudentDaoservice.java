@@ -271,7 +271,8 @@ public class StudentDaoservice implements StudentDaointerface {
 	}
 	 public void addcourses()throws MySQLIntegrityConstraintViolationException
 	 {Scanner sc=new Scanner(System.in);
-		 conn=DBUtiles.getConnection();			   
+		 conn=DBUtiles.getConnection();
+	   List<String> ls=new ArrayList<String>();
 	    PreparedStatement stmts = null;
 		  try
 		  {
@@ -285,8 +286,14 @@ public class StudentDaoservice implements StudentDaointerface {
 				  int cou=rs.getInt("courseid");
 				  String name=rs.getString("coursename");
 				  System.out.format("%14s %17s\n",cou,name);
+				   String name1=rs.getString("coursename");
+				  
+				  ls.add(name1);
 						  
 			  }
+			   System.out.println("Available  courses");
+			  System.out.println("----------------");
+			  ls.forEach(System.out::println);
 			  stmts.close();
 			  System.out.println("Enter the student id");
 			  int stdid=sc.nextInt();
