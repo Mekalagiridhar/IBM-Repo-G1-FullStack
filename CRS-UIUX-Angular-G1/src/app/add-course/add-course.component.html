@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+
+              <form ngform>
+                 <h2>Add course</h2>
+                 <div class="froms-group">
+                    <label for="id">student id</label>
+                    <input type="number" class="form-control" id="d"
+                    required
+                    [(ngModel)]="newuser.id"   name="id">
+                </div>
+                <div class="froms-group">
+                    <label for="course">course name</label>
+                    <input type="text" class="form-control" id="studentid"
+                    required
+                    [(ngModel)]="newuser.course"   name="course">
+                </div>
+                <button type="submit" class="btn btn-primary"(click)="add_course()">submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

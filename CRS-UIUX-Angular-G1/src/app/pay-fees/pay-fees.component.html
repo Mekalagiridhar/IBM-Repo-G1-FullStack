@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+<form ngform>
+    <h2>Fee Payment</h2>
+    <div class="froms-group">
+        <label for="id">student id</label>
+        <input type="number" class="form-control" id="d"
+        required
+        [(ngModel)]="newuser.id"   name="id">
+    </div>
+    <div class="froms-group">
+        <label for="course">Amount</label>
+        <input type="number" class="form-control" id="number"
+        required
+        [(ngModel)]="newuser.amount"   name="amount">
+    </div>
+    <div class="froms-group">
+        <label for="course">payment type</label>
+        <input type="text" class="form-control" id="paytype"
+        required
+        [(ngModel)]="newuser.paytype"   name="paytype">
+    </div>
+    <button type="submit" class="btn btn-primary"(click)="pay_fee()">submit</button>
+</form>
+
+</div>
+</div>
+</div>
+</div>

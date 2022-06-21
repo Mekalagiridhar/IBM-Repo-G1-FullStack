@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>sign up</h1>
+                    <h6>Register Yourself!!</h6>
+
+                </div>
+                <form>
+                  
+                    <form ngform >
+                        <div class="mb-3">
+                          <label for ="email">Email</label>
+                          <input type="text" class="form-control" id="email"
+                          required
+                          [(ngModel)]="newsignup.email" name="email">
+                        </div>
+                        
+                        <div class="mb-3">
+                          <label for ="name">Name</label>
+                          <input type="text" class="form-control" id="name"
+                          required
+                          [(ngModel)]="newsignup.name" name="name">
+                          </div>
+
+                        <div class="mb-3">
+                          <label for ="password">Password</label>
+                          <input type="number" class="form-control" id="password"
+                          required
+                          [(ngModel)]="newsignup.password" name="password">
+                        </div>
+
+                       
+                        <button type="submit" class="btn btn-primary"(click)="newuser()">submit</button>
+                      </form>
+                      <a style="color:#fff; margin-top:10px" href="user">Alreay Registered?</a>
+                    </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+

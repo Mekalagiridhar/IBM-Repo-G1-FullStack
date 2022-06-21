@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #10ac70;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #a21515;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a [routerLink]="['/registercourse']">Register Course</a>
+
+  <a [routerLink]="['/addcourse']">Add Course</a>
+
+  <a [routerLink]="['/deletecourse']">Delete Course</a>
+  
+  <a [routerLink]="['/viewgrades']">View Grades</a>
+ 
+
+  <a [routerLink]="['/payment']">Fees</a>
+
+  <a (click)="view_course()">view course</a>
+  
+  
+</div>
+
+<div class="main">
+  <h2 style="text-align:center">Student Profile</h2>
+  <p>
+      
+  </p>
+</div>
+
+
+
+<div>
+  <ol>
+      <li style="text-align:center" *ngFor='let student of getData'>
+      {{ student.courseid}}<b>||</b> {{student.coursename}}
+      </li>
+   </ol>
+</div>
+<div>
+  <ol>
+      <li *ngFor='let student of getData'>
+        {{student.studentGrade}} <b>||</b>
+      </li>
+   </ol>
+</div>
+
+
+</body>
+</html>

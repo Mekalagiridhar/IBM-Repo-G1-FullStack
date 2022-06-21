@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h6>please enter username and password</h6>
+
+                </div>
+                <form>                    
+                    <form id="login" ngForm>    
+                        <label for = username><b>User Name     
+                        </b>    
+                        </label>    
+                        <input type="text" name="name" id="name"  required
+                        [(ngModel)]="user.name"  placeholder="name">    
+                        <br><br>    
+                        <label for = Password><b>Password     
+                        </b>    
+                        </label>    
+                        <input type="Password" name="Password" id="Password" required
+                        [(ngModel)]="user.password"  placeholder="password">    
+                        <br><br>    
+            
+                        <button type="login" class="btn btn-primary" (click)=" login()">Log in</button>
+            
+                        <br><br>    
+                        <input type="checkbox" id="check">    
+                        <span>Remember me</span>    
+            
+                    </form>
+            
+        
+                      <a style="color:#fff; margin-top:10px" routerLink="/signup">New user? click to signup!!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
